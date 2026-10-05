@@ -1,80 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AERIS-1 Tricopter</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
-<style>
-:root{--paper:#f1e6d0;--card:#faf4e6;--ink:#2e2218;--green:#56604f;--red:#7a2b22;--line:#b9a98c}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:"Playfair Display",Georgia,serif;line-height:1.65;
-background-image:radial-gradient(circle at 12% 18%,#e6d7b8 0,transparent 22%),radial-gradient(circle at 88% 70%,#e6d7b8 0,transparent 25%)}
-.num,.stat b{font-family:"Playfair Display",Georgia,serif;font-variant-numeric:lining-nums tabular-nums}
-header{text-align:center;padding:72px 20px 40px;border-bottom:3px double var(--ink)}
-header h1{font-size:clamp(3rem,13vw,8rem);margin:0;font-weight:800;letter-spacing:.02em;line-height:1}
-header p{max-width:36em;margin:16px auto 0;font-style:italic;color:var(--green);font-size:1.15rem}
-header small{display:block;margin-top:18px;color:var(--red);letter-spacing:.12em}
-.brief{max-width:720px;margin:56px auto 0;padding:0 20px}
-.brief p{font-size:1.15rem;margin:18px 0}
-.brief .lead{font-size:1.7rem;line-height:1.35;font-weight:600;margin-bottom:28px}
-main{max-width:720px;margin:0 auto;padding:56px 20px 96px;display:flex;flex-direction:column;gap:72px}
-main>:nth-child(1){order:1}main>:nth-child(4){order:2}main>:nth-child(2){order:3}main>:nth-child(5){order:4}main>:nth-child(3){order:5}main>:nth-child(6){order:6}
-.plate{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:48px 44px;box-shadow:0 2px 0 var(--line)}
-.plate h2{margin:0 0 6px;font-size:1.8rem;border-bottom:2px solid var(--red);padding-bottom:6px}
-.plate .tag{color:var(--green);font-style:italic;margin:0 0 28px}
-.plate h3{margin:32px 0 8px;font-size:1.05rem;color:var(--red)}
-.plate p,.plate li{font-size:1.05rem;margin:12px 0}
-.plate p .num,.plate li .num{font-size:1.45em;font-weight:800}
-ul{padding-left:1.1em;margin:6px 0}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
-.stat{border:1px solid var(--line);border-radius:5px;padding:20px 12px;text-align:center;background:#fffaf0}
-.stat b{display:block;font-size:clamp(2rem,8vw,3.4rem);font-weight:800;line-height:1.15}
-.stat>span{font-size:.95rem;color:var(--green)}
-.bar{margin:24px 0}
-.bar div{height:14px;border-radius:7px;background:#e3d8c0;overflow:hidden;margin-top:4px}
-.bar i{display:block;height:100%;width:0;background:var(--green);transition:width 1.6s cubic-bezier(.2,.7,.2,1)}
-.bar.r i{background:var(--red)}.bar.k i{background:var(--ink)}
-.bar>span{display:flex;justify-content:space-between;align-items:baseline;font-size:1.05rem}
-.bar b{font-size:2rem;font-weight:800}
-svg{width:100%;height:auto;display:block}
-svg text{pointer-events:none}
-.prop{transform-box:fill-box;transform-origin:center;animation:spin var(--spd,.3s) linear infinite}
-.part{cursor:pointer}.part:hover ellipse,.part:hover rect,.part.sel ellipse,.part.sel rect{stroke:#7a2b22;stroke-width:3}
-.ctl{display:grid;gap:18px;margin:24px 0}
-.ctl label{display:block;font-size:1.05rem}
-.ctl b{font-size:1.5rem}
-input[type=range]{width:100%;accent-color:#7a2b22;margin-top:8px}
-.info{min-height:3.4em;font-size:1.05rem;color:#4a3b2c;border-left:3px solid var(--red);padding-left:14px}
-.flow span{cursor:pointer}.flow span.sel{background:var(--ink);color:#faf4e6}
-.ladder div{cursor:pointer}.ladder div.sel{outline:3px solid var(--red);outline-offset:2px}
-:focus-visible{outline:3px solid var(--red);outline-offset:2px}
-@keyframes spin{to{transform:rotate(360deg)}}
-.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:32px 0 0}
-.flow span{border:1px solid var(--ink);border-radius:4px;padding:4px 9px;font-size:.88rem;background:#fffaf0}
-.flow em{color:var(--red);font-style:normal;animation:pulse 2s infinite}
-@keyframes pulse{50%{opacity:.25}}
-.ladder{display:flex;align-items:flex-end;gap:10px;height:300px;margin:32px 0 12px}
-.ladder div small{display:block;font-size:.55em;color:var(--green);font-weight:600}
-.ladder div{flex:1;background:linear-gradient(#cdbf9f,#e3d8c0);border:1px solid var(--line);border-bottom:0;border-radius:4px 4px 0 0;text-align:center;height:0;overflow:hidden;transition:height 1.1s cubic-bezier(.2,.8,.25,1);padding-top:10px;font-weight:800;min-width:0;font-size:clamp(.85rem,3.6vw,1.8rem);line-height:1.15}
-.ladder div.on{background:linear-gradient(#b9a98c,#e3d8c0)}
-.v{color:var(--green);font-weight:600}.d{color:var(--red);font-weight:600}
-.faq{max-width:720px;margin:0 auto;padding:0 20px 96px}
-.faq h2{font-size:2rem;margin:0 0 28px;border-bottom:2px solid var(--red);padding-bottom:8px}
-.faq details{border-bottom:1px solid var(--line);padding:20px 0}
-.faq summary{cursor:pointer;font-size:1.2rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";color:var(--red);font-size:1.6rem;line-height:1;transition:transform .25s}
-.faq details[open] summary::after{transform:rotate(45deg)}
-.faq details p{margin:14px 0 0;font-size:1.05rem;color:#4a3b2c}
-footer{text-align:center;padding:30px 16px 50px;border-top:3px double var(--ink);color:var(--green);font-style:italic}
-@media(max-width:600px){.stat{padding:18px 4px}.ladder{gap:6px;height:250px}.plate{padding:32px 22px}main{gap:48px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-</style>
-</head>
+<header>
+  <h1>AERIS-1</h1>
+  <p>A compact three-rotor robotics platform with custom embedded control.</p>
+  <small>TRICOPTER ROBOTICS SHOWCASE</small>
+
+  <a href="https://github.com/ahnafftahmidd-spec/AERIS-1/"
+     target="_blank"
+     rel="noopener noreferrer"
+     style="
+       display:inline-block;
+       margin-top:18px;
+       padding:9px 16px;
+       border:1px solid var(--ink);
+       border-radius:4px;
+       background:var(--ink);
+       color:var(--card);
+       font:inherit;
+       font-size:.95rem;
+       text-decoration:none;
+     ">
+    View Project Repository
+  </a>
+</header>
 <body>
 <header>
 <h1>AERIS-1</h1>
