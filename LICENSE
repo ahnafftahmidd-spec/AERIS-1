@@ -1,36 +1,163 @@
 AERIS-1 Community License
-Version 1.0
+Version 1.1
 
 Copyright (c) 2026 Ahnaf Tahmid. All rights reserved.
 
-This license covers the AERIS-1 Tricopter project: its design, firmware, CAD
-files, documentation, text, images and website (the "Work").
+This license covers the AERIS-1 Tricopter project: its design, firmware, source
+code, CAD files, 3D models, schematics, documentation, text, images, videos,
+graphics, website content, and other materials included in the project (the
+"Work").
 
 1. WHAT YOU MAY DO
+
 You may view the Work, and you may build your own copy or adapt it for your
 own personal learning or hobby project, provided that:
-  a. the use is non-commercial;
-  b. you give clear credit: "Based on AERIS-1 by Ahnaf Tahmid" with a link
-     to this repository; and
-  c. anything you share publicly keeps this license and this notice.
+
+a. the use is strictly non-commercial;
+
+b. you give clear and visible credit:
+"Based on AERIS-1 by Ahnaf Tahmid"
+together with a link to this repository;
+
+c. anything you share publicly that contains, incorporates, or is derived
+from the Work keeps this license and the original copyright notice;
+
+d. you do not imply that the author has endorsed, sponsored, approved, or
+officially participated in your project; and
+
+e. you do not present a modified version as the official AERIS-1 project
+unless you have received written permission from the author.
 
 2. WHAT YOU MAY NOT DO WITHOUT WRITTEN PERMISSION
+
 Without prior written permission from the author, you may not:
-  a. enter, present or display the Work, or any copy or adaptation of it, in
-     any science fair, robotics showcase, exhibition, competition, contest,
-     or school or academic assessment;
-  b. claim the Work, or any part of it, as your own original design;
-  c. sell, license or otherwise use the Work for commercial purposes; or
-  d. remove or change this notice or the credit in section 1.
 
-3. PERMISSION
-To ask for permission, contact the author through this repository's
-GitHub profile. Permission is only valid if given in writing.
+a. enter, present, display, demonstrate, submit, or otherwise use the Work,
+or any copy, modification, adaptation, derivative design, or substantial
+portion of it, in any science fair, robotics showcase, exhibition,
+competition, contest, school project, academic assessment, research
+submission, award submission, or similar public or academic event;
 
-4. NO WARRANTY
-The Work is provided "as is", without warranty of any kind. Building and
-flying aircraft is dangerous. You do so at your own risk, and the author is
-not liable for any damage or injury.
+b. claim the Work, any derivative of it, or any substantial portion of its
+design as your own original work;
 
-5. TERMINATION
-Any breach of this license ends your rights under it.
+c. sell, license, rent, lease, distribute for payment, manufacture for
+commercial purposes, or otherwise use the Work or any derivative of it
+for commercial purposes;
+
+d. upload, mirror, redistribute, or publish the Work or substantial portions
+of it on another website, repository, marketplace, file-sharing service,
+social-media account, or other platform, except as expressly permitted
+by this license;
+
+e. remove, obscure, alter, or replace the copyright notice, license text,
+attribution, author information, or other notices included with the Work;
+
+f. use the name "AERIS-1", the author's name, project branding, logos, or
+other identifying marks in a manner that suggests official affiliation,
+endorsement, sponsorship, or authorship without written permission;
+
+g. create or distribute a derivative project that is substantially based on
+the Work while intentionally removing or concealing its connection to
+AERIS-1 or its original author;
+
+h. use the Work or any derivative of it as the basis of a product, kit,
+service, course, paid tutorial, paid workshop, commercial publication,
+or other monetized offering without written permission; or
+
+i. sublicense, transfer, or grant additional rights to the Work beyond those
+expressly granted by this license.
+
+3. DERIVATIVE WORKS
+
+For the purposes of this license, a "derivative work" includes modified,
+adapted, redesigned, translated, remixed, or otherwise substantially
+transformed versions of the Work, including designs that retain substantial
+elements of the AERIS-1 structure, CAD geometry, electronics architecture,
+firmware, documentation, or other original creative elements.
+
+Making substantial modifications does not remove the requirement to provide
+credit or comply with the restrictions of this license.
+
+Minor changes, such as changing colors, dimensions, component selections, or
+cosmetic features, do not by themselves make a project independent of this
+license when the underlying design remains substantially based on AERIS-1.
+
+4. PUBLIC SHARING
+
+If you publicly share a copy, modification, adaptation, photograph, video,
+build log, CAD file, firmware, documentation, or other material substantially
+based on the Work, you must:
+
+a. retain this license and the original copyright notice;
+
+b. provide the required credit:
+"Based on AERIS-1 by Ahnaf Tahmid";
+
+c. provide a link to the original AERIS-1 repository where reasonably
+possible; and
+
+d. clearly indicate whether your version has been modified.
+
+Publicly sharing a photograph or video of a physical AERIS-1 build does not
+transfer ownership of the original Work or grant permission for commercial
+use, competition use, or redistribution of the underlying design.
+
+5. PERMISSION
+
+To ask for permission for any use restricted by this license, contact the
+author through this repository's GitHub profile.
+
+Permission is only valid if expressly given in writing by the author.
+
+Permission for one use does not automatically grant permission for any other
+use.
+
+6. OWNERSHIP AND COPYRIGHT
+
+The Work remains the property of the author and is protected by applicable
+copyright and other intellectual-property laws.
+
+This license does not transfer ownership of the Work or any intellectual-
+property rights to you.
+
+You receive only the limited permissions expressly stated in this license.
+
+7. NO WARRANTY
+
+The Work is provided "as is", without warranty of any kind.
+
+Building, modifying, operating, and flying aircraft or drones can be
+dangerous. You are solely responsible for determining whether your build,
+modifications, components, software, and operation are safe and lawful.
+
+The author is not liable for any damage, loss, injury, accident, malfunction,
+or other consequence arising from the use, modification, construction, or
+operation of the Work, to the maximum extent permitted by applicable law.
+
+8. TERMINATION
+
+Any breach of this license immediately terminates all rights granted to you
+under this license.
+
+Upon termination, you must stop using, distributing, publishing, displaying,
+or otherwise exercising the rights granted by this license and, where
+reasonably possible, remove unauthorized copies or distributions under your
+control.
+
+Termination does not prevent the author from pursuing any other rights or
+remedies available under applicable law.
+
+9. RESERVATION OF RIGHTS
+
+All rights not expressly granted by this license are reserved by the author.
+
+Nothing in this license should be interpreted as granting permission for
+commercial use, competition or academic use, redistribution, sublicensing,
+trademark use, or any other use not expressly permitted above.
+
+10. SEVERABILITY
+
+If any provision of this license is found to be invalid or unenforceable,
+that provision shall be interpreted to the minimum extent necessary, and the
+remaining provisions shall continue in effect to the extent permitted by law.
